@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+{#    <script src="/static/js/jquery-1.12.4.min.js"></script>#}
+{#    <script>#}
+{#        $(function () {#}
+{#            $('#but').click(function () {#}
+{#                var username = $('#username').val(),#}
+{#                    password = $('#password').val();#}
+{#                    btn = $('#btn').prop('btn');#}
+{#                $.ajax({#}
+{#                    'url':'/login_check',#}
+{#                    'type': 'post',#}
+{#                    'data': {'username':username, 'password':password,'btn':btn},#}
+{#                    'dataType': 'json'#}
+{#                }).success(function (data) {#}
+{#                    if (data.res == 1){#}
+{#                        location = '/login_ajax'#}
+{#                    }else {#}
+{#                        $('#box').show()#}
+{#                    }#}
+{#                });#}
+{#            })#}
+{#        })#}
+{##}
+{#    </script>#}
+</head>
+<body>
+<h3>登录</h3>
+<form method="post" action="/login_check">
+    用户名:<input type="text" name="username" id="username" value="{{ username }}"><br/>
+    密 码 :<input type="password" name="password" id="password"><br/>
+    <input type="submit" id="but" value="登录">
+    <div id="box" style="display: none; color: red;">用户名或密码输入错误</div><br/>
+    <input type="checkbox" name="btn">记住用户名
+</form>
+</body>
+</html>
